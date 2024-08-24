@@ -1,0 +1,238 @@
+/* Quitar configuraciones por defecto */
+/* Estilos solo de Hero y Home */
+* {
+    margin: 0; /* Quitar margenes */
+    padding: 0; /* Quitar padings */
+}
+
+/* Logo Inicial */
+/* Ajusta el contenedor para que cubra todo el ancho*/
+.logo {
+    display: flex; /* Activa Flexbox en el contenedor */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    height: 10vh; /* Asegura que el contenedor tenga la altura completa de la ventana */
+}
+
+/* Imagen de logo */
+.logo img {
+    width: 300px; /* Ajusta el tamaño de la imagen */
+}
+
+/* Hero */
+/* Asegura que el contenedor ocupe toda la ventana del navegador */
+.hero {
+    position: relative;
+    width: 99.2vw; /* Ocupa el ancho completo de la ventana */
+    height: 99.9vh; /* Ocupa el alto completo de la ventana */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+}
+
+/* Ajusta el video para que cubra todo el contenedor */
+.hero video source{
+    width: 100%; /* Ocupa el ancho completo de la ventana */
+    height: 100%; /* Ocupa el alto completo de la ventana */
+    object-fit: cover; /* Asegura que el video cubra todo el área, cortando lo que sea necesario */
+    transform: translate(-50%, -50%); /* Centra el video */ 
+    border: 3px outset; /* ancho estilo color */
+    padding: 20px; /* añade espacio alrededor del contenido */
+}
+
+/* Frase del hero, su ubicación y z-index*/
+.hero h1 {
+   color:white; /*Color del texto */
+   position:absolute; /* Tipo de posición */
+   top :40%; /* Lugar de pocicion de altura*/
+   left :5%; /*Lugar de pocición de izquierda a derecha */
+   font-size:xx-large; /* Tamaño de la letra*/
+   z-index:-100px; /* Posición sobre los objetos */
+   width: 40%; /* Ancho máximo */
+}
+
+
+/* Hero Response*/
+/* Para telefono */
+@media screen and (max-width: 760px) {
+
+    /* Tamaño del hero */
+    .hero {
+        height: 101.5vh; /* Altura */
+        width: 100vw; /* Ancho*/
+    }
+
+    /* Frase del hero*/
+    .hero h1{
+        width: 80%; /* ancho máximo */
+        left: 10%;  /* Lugar de pocision de izquierda*/ 
+        top: 30%; /* Posición de arriba hacia abajo */
+        text-align: center; /*Centrar el texto*/
+    }
+    
+    /*Boton ver más*/
+    .hero button {
+        top: 50%;
+        left: 35%;
+    }
+}
+
+/* Hero Response*/
+/* Para tablet  */
+@media screen and (max-width: 1200px) {
+
+    /* Tamaño del hero */
+    .hero {
+        height: 101.5vh; /* Altura */
+        width: 100vw; /* Ancho*/
+    }
+
+    /* Frase del hero*/
+    .hero h1{
+        width: 80%; /* ancho máximo */
+        left: 10%;  /* Lugar de pocision de izquierda*/ 
+        top: 30%; /* Posición de arriba hacia abajo */
+        text-align: center; /*Centrar el texto*/
+    }
+    
+    /*Boton ver más*/
+    .hero button {
+        top: 50%;
+        left: 40%;
+    }
+
+}
+
+.wave {
+    position: absolute;
+    left: -180px;
+    bottom: 0;
+    /*width: 200px;*/
+    /*height: 200px;*/
+    /*width: 100%;*/
+    /*border-radius: 50%;*/
+    /*background:rgba(0,0,0, .3);*/
+    width: 2402px;
+    height: 427px;
+    background: url(https://static.platzi.com/media/files/waves_c8551f5d-ecf6-4a81-ae1d-f3a0ad55ba10.png) center bottom no-repeat;
+    animation: 5s wave ease-in-out infinite alternate;
+  }
+  .wave.a {
+    background-position: 0 -854px;
+  }
+  .wave.b {
+    background-position: 0 -427px;
+    animation-delay: .6s;
+  }
+  .wave.c {
+    background-position: 0 0;
+    animation-delay: 1.2s;
+  }
+  /*.container {
+    position: absolute;
+  }*/
+  @keyframes wave {
+    0% {
+      transform: translate(0 , 0);
+    }
+    50% {
+      transform: translate(-80px, 30px);
+    }
+    100% {
+      transform: translate(160px, -60px);
+    }
+  }
+
+/* texto entre */
+.text-productos{
+    text-align: center;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+/*Cartas de los mejores productos */
+.container{
+    margin-top: 15px;
+}
+
+.card-container {
+    perspective: 1000px;
+    width: 350px;
+    height: 300px;
+    margin: 50px auto;
+}
+
+/* Tarjeta con posición relativa */
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Lado frontal de la tarjeta */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.card-front {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Lado trasero de la tarjeta */
+.card-back {
+    background-color: #007bff;
+    color: white;
+    transform: rotateY(180deg);
+    text-align: center;
+    font-size: small;
+}
+
+/* Efecto de giro al pasar el cursor */
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+
+/*Pie de pagina web */
+.pie-paga-web{
+    width: 98.9vw; /* Ocupa el ancho completo de la ventana */
+    height: 47.9vh; /* Ocupa el alto completo de la ventana */
+    background-color: #007bff; /* Color de fon del pie */
+    display: flex;
+}
+
+.pie-paga-web .informativos{
+    width: 20%;
+    margin-left: 5%;
+    color: white;
+}
+
+.pie-paga-web .informativos h1{
+    margin-top: 75px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: large;
+}
+
+.pie-paga-web .informativos h3 {
+    font-size: medium;
+}
+
+.redes-sociales {
+    display: flex;
+}
+
+.redes-sociales i{
+    font-size: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+}

@@ -1,0 +1,36 @@
+/*Estilos de Navbar */
+/* Cambiar el color del navbar a azul */
+.navbar-custom, .dropdown-menu {
+    background-color: #007bff; /* Color azul */
+}
+
+/* Cambiar el color del texto en el navbar cuando está activo */
+.navbar-custom .navbar-nav .nav-link, .dropdown-item {
+    color: #ffffff; /* Color blanco */
+  }
+  
+  /* Cambiar el color del texto en el navbar cuando está deshabilitado */
+  .navbar-custom .navbar-nav .nav-link.disabled {
+    color: rgb(58, 58, 58); 
+  }
+
+.btn-outline-success{
+    color: white;
+    border-color: white;
+}
+
+ /* Menu Responsive */
+@media screen and (max-width: 760px) {
+    /* Para Telefonos */
+    .navbar-toggler {
+        border-color: white;
+      }
+  
+    /* Icno del menú*/
+    .navbar-toggler-icon {
+        background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>');
+        align-items: center;
+        justify-items: center;
+    }
+
+}
