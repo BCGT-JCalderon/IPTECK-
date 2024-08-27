@@ -142,8 +142,7 @@
     transform: rotateY(180deg);
     text-align: center;
     font-size: small;
-    width: 90%;
-    margin-left: 5%;
+    text-margin: 5%;
 }
 
 /* Efecto de giro al pasar el cursor */
